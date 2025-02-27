@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام التأمين</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="insurance-app" class="hidden">
+        <div class="container">
+            <div class="header">
+                <img src="img/logo.png" alt="Insurance Logo" class="logo">
+                <h1>تأمين شامل</h1>
+                <span class="close-btn">&times;</span>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="policies">سياساتي</div>
+                <div class="tab" data-tab="vehicle">مركبة</div>
+                <div class="tab" data-tab="property">ممتلكات</div>
+                <div class="tab" data-tab="health">صحة</div>
+                <div class="tab" data-tab="claims">مطالبات</div>
+            </div>
+            
+            <div class="content">
+                <!-- Policies Tab -->
+                <div class="tab-content active" id="policies-tab">
+                    <h2>سياساتك النشطة</h2>
+                    <div class="policies-list">
+                        <!-- Policies will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Vehicle Tab -->
+                <div class="tab-content" id="vehicle-tab">
+                    <h2>تأمين المركبات</h2>
+                    <div class="insurance-options">
+                        <!-- Vehicle insurance options will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Property Tab -->
+                <div class="tab-content" id="property-tab">
+                    <h2>تأمين الممتلكات</h2>
+                    <div class="insurance-options">
+                        <!-- Property insurance options will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Health Tab -->
+                <div class="tab-content" id="health-tab">
+                    <h2>تأمين الصحة</h2>
+                    <div class="insurance-options">
+                        <!-- Health insurance options will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Claims Tab -->
+                <div class="tab-content" id="claims-tab">
+                    <h2>تقديم مطالبة</h2>
+                    <form id="claim-form">
+                        <div class="form-group">
+                            <label for="claim-type">نوع المطالبة</label>
+                            <select id="claim-type" required>
+                                <option value="">اختر النوع</option>
+                                <option value="vehicle">مركبة</option>
+                                <option value="property">ممتلكات</option>
+                                <option value="health">صحة</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="claim-description">الوصف</label>
+                            <textarea id="claim-description" rows="4" placeholder="صف ما حدث..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="claim-amount">المبلغ (دولار)</label>
+                            <input type="number" id="claim-amount" min="1" required>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">تقديم المطالبة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="nui://game/ui/jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
